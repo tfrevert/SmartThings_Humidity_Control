@@ -66,11 +66,11 @@ def checkTurnOn(evt) {
 
     def unitvalue = Double.parseDouble("$evt.value")
 
-	if ( unitvalue >= maxhumidity) {
-		// Turn on switch
-		log.debug "Turning on the switch and setting timer to $fantimer minutes."
-		fanswitch.on()
-		runIn(fantimer*60, turnoff)
+  	if ( unitvalue >= maxhumidity) {
+  		// Turn on switch
+  		log.debug "Turning on the switch and setting timer to $fantimer minutes."
+  		fanswitch.on()
+  		runIn(fantimer*60, turnoff)
     } else {
     	log.debug "Humidity test: pass"
     }
